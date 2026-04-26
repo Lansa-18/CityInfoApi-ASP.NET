@@ -1,7 +1,13 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => options.ReturnHttpNotAcceptable = true).AddXmlDataContractSerializerFormatters();
+
+// builder.Services.AddProblemDetails(options => options.CustomizeProblemDetails = ctx =>
+// {
+//     ctx.ProblemDetails.Extensions.Add("server", Environment.MachineName);
+// });
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
