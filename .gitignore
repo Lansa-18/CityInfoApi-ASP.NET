@@ -17,7 +17,7 @@ obj/
 .vscode/
 
 # NuGet
-*.nupkg
+*.nupkg 
 *.snupkg
 
 # Publish output
