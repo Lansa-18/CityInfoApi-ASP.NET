@@ -7,11 +7,12 @@ public class CitiesDataStore
 {
     public List<CityDto> Cities { get; set; }
 
-    public static CitiesDataStore Current { get; } = new CitiesDataStore();
+    // public static CitiesDataStore Current { get; } = new CitiesDataStore();
     public CitiesDataStore()
     {
         // Dummy Data
-        Cities = new List<CityDto>() {
+        Cities = new List<CityDto>()
+        {
             new CityDto()
             {
                 Id = 1,
@@ -23,15 +24,15 @@ public class CitiesDataStore
                     {
                         Id = 1,
                         Name = "Central Park",
-                        Description = "The most visited urban park in the United States."
+                        Description = "The most visited urban park in the United States.",
                     },
                     new PointOfInterestDto()
                     {
                         Id = 2,
                         Name = "Empire State Building",
-                        Description = "A 102-Story skyscraper located in Midtown Manhattan."
-                    }
-                }
+                        Description = "A 102-Story skyscraper located in Midtown Manhattan.",
+                    },
+                },
             },
             new CityDto()
             {
@@ -40,38 +41,43 @@ public class CitiesDataStore
                 Description = "The one with the cathedral that was never really finished.",
                 PointsOfInterest = new List<PointOfInterestDto>()
                 {
-                    new PointOfInterestDto() {
+                    new PointOfInterestDto()
+                    {
                         Id = 3,
                         Name = "Cathedral of Our Lady",
-                        Description = "A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans."
+                        Description =
+                            "A Gothic style cathedral, conceived by architects Jan and Pieter Appelmans.",
                     },
-                    new PointOfInterestDto() {
+                    new PointOfInterestDto()
+                    {
                         Id = 4,
                         Name = "Antwerp Central Station",
-                        Description = "The the finest example of railway architecture in Belgium."
+                        Description = "The the finest example of railway architecture in Belgium.",
                     },
-                }
+                },
             },
             new CityDto()
             {
-                Id= 3,
+                Id = 3,
                 Name = "Paris",
                 Description = "The one with that big tower.",
                 PointsOfInterest = new List<PointOfInterestDto>()
                 {
-                    new PointOfInterestDto() {
+                    new PointOfInterestDto()
+                    {
                         Id = 5,
                         Name = "Eiffel Tower",
-                        Description = "A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel."
+                        Description =
+                            "A wrought iron lattice tower on the Champ de Mars, named after engineer Gustave Eiffel.",
                     },
-                    new PointOfInterestDto() {
+                    new PointOfInterestDto()
+                    {
                         Id = 6,
                         Name = "The Louvre",
-                        Description = "The world's largest museum."
+                        Description = "The world's largest museum.",
                     },
-                }
-            }
+                },
+            },
         };
     }
-
 }
