@@ -1,7 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using CityInfo.Models;
 
 namespace CityInfo;
 
@@ -18,8 +17,8 @@ public class City
     [MaxLength(200)]
     public string? Description { get; set; }
 
-    public ICollection<PointOfInterestDto> PointsOfInterest { get; set; } =
-        new List<PointOfInterestDto>(); // it's a good idea to initialize this in order to avoid the null reference error when there are no point of interest.
+    public ICollection<PointOfInterest> PointsOfInterest { get; set; } =
+        new List<PointOfInterest>(); // it's a good idea to initialize this in order to avoid the null reference error when there are no point of interest.
 
     public City(string name)
     {
