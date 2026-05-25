@@ -12,7 +12,7 @@ namespace CityInfo.Controllers
         private readonly ILogger<PointsOfInterestController> _logger;
         private readonly IMailService _mailService;
         private readonly CitiesDataStore _citiesDataStore;
-
+7f
         public PointsOfInterestController(
             ILogger<PointsOfInterestController> logger,
             IMailService mailService,
